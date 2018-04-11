@@ -1,0 +1,56 @@
+{
+  "name": "it_err",
+  "version": "1.0.0",
+  "description": "error",
+  "main": "app.js",
+  "scripts": {
+    "test": "node --harmony-async-await app.js",
+    "writeFile": "node ./logs/errLog.js",
+    "creatTable": "node ./module/orm/creatTable.js",
+    "start": "PORT=3002 pm2 start app.js -i 4 --name it_err",
+    "restart": "pm2 reload it_err",
+    "stop": "pm2 stop it_err",
+    "delete": "pm2 delete it_err"
+  },
+  "keywords": [
+    "error"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/koa": "^2.0.44",
+    "babel-eslint": "^7.2.3",
+    "cron": "^1.3.0",
+    "crypto": "0.0.3",
+    "glob": "^7.1.1",
+    "humanize-number": "0.0.2",
+    "ioredis": "^2.5.0",
+    "koa": "^2.5.0",
+    "koa-compose": "^3.2.1",
+    "koa-cors": "^0.0.16",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^7.4.0",
+    "koa2-loggers": "^0.1.2",
+    "lodash.throttle": "^4.1.1",
+    "memory-cache": "^0.1.6",
+    "moment": "^2.21.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "pm2": "^2.10.1",
+    "querystring": "^0.2.0",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5",
+    "sequelize": "^4.37.4",
+    "socket.io": "^2.0.4",
+    "ts-node": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^9.6.0",
+    "eslint": "^2.2.0",
+    "eslint-config-standard": "^5.1.0",
+    "eslint-plugin-promise": "^1.0.8",
+    "eslint-plugin-standard": "^1.3.2",
+    "koa-body": "^2.5.0",
+    "koa-static": "^3.0.0"
+  }
+}

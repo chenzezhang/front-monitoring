@@ -1,0 +1,48 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 5,
+        "ecmaFeatures": {
+            "arrowFunctions": false,
+            "blockBindings": false,
+            "classes": false,
+            "defaultParams": false,
+            "destructuring": false,
+            "forOf": false,
+            "generators": false,
+            "modules": false,
+            "restParams": false,
+            "spread": false
+
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": "error",
+        "camelcase": "warn",
+        "no-eval": "error",
+        "no-console": ["warn", { "allow": ["warn", "error"] }],
+        "no-debugger": "warn",
+        "strict": "error",
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn"
+    }
+}
