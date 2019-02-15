@@ -339,7 +339,23 @@
 
         return loadAcData;
     };  
-
+    // 增加异步-promise 统计error
+    w.addEventListener("unhandledrejection", function(e){
+      e.preventDefault()
+      console.log('我知道 promise 的错误了');
+      console.log(e.reason);
+      return true;
+    });
+    Promise.reject('promise error');
+    new Promise((resolve, reject) => {
+      reject('promise error');
+    });
+    new Promise((resolve) => {
+      resolve();
+    }).then(() => {
+      throw 'promise error'
+    });
+//   addEventListener ---> DOMContentLoaded
     w.addEventListener('load', function () {
         var tDate = downTime();
         var newTime = new Date() - 0;
