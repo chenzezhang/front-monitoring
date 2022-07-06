@@ -33,7 +33,7 @@
     "koa2-loggers": "^0.1.2",
     "lodash.throttle": "^4.1.1",
     "memory-cache": "^0.1.6",
-    "moment": "^2.21.0",
+    "moment": "^2.29.4",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "pm2": "^2.10.1",
